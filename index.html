@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Simulador de Banco</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Consulta de Cuenta Bancaria</h1>
+        <p id="bienvenido"></p>
+        <div id="saldo">
+            <!-- El saldo se actualizará dinámicamente con JavaScript -->
+        </div>
+        <form id="cliente-form">
+            <label for="cliente-form">Nombre de usuario</label>
+            <input type="text" id="newCliente" name="newCliente" required>
+
+            <label for="cantidadInicial">Cantidad Inicial</label>
+            <input type="number" id="cantidadInicial" name="cantidadInicial" required>
+            <button type="submit">Registrar</button>
+        </form>
+        <form id="retiro-form">
+            <label for="retiro-amount">Monto a Retirar:</label>
+            <input type="number" id="retiro-amount" name="retiro-amount" required>
+            <button type="submit">Retirar</button>
+        </form>
+        <form id="deposito-form">
+            <label for="deposito-amount">Monto a Depositar (máx. $2000):</label>
+            <input type="number" id="deposito-amount" name="deposito-amount" max="2000" required>
+            <button type="submit">Depositar</button>
+        </form>
+        <div id="mensaje"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
